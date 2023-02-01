@@ -1,0 +1,32 @@
+* { /* estilos a aplicar a todos los elementos que así lo permitan */
+    box-sizing: border-box;
+    background-color: beige;
+}
+
+h1 {
+    font-family: "Anton", sans-serif;
+}
+
+h2 {
+    font-family: "Oswald", sans-serif;
+}
+
+/* evitar que imagen escale más del 100%} */
+img {
+    max-width: 100%;
+}
+
+nav {
+    background-color: teal;
+}
+
+footer {
+    background-color: teal; 
+    font-size:  small;
+    color: white;
+}
+
+/* quitar indicador de item de lista no ordenada */
+.ul_solotexto {
+    list-style-type: none;
+}

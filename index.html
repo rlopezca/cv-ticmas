@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Idioma principal en página -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">      <!-- RWD escalar contenido a la pantalla del dispositivo -->
+    <title>Proyecto de desarrollo web: CV</title>
+    <!-- Hacer disponibles fuentes externas (Google Fonts) a usar-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <!-- Más fuentes externas, tipo íconos (FontAwesome), en este caso cargada con un script (tb puede hacerse con enlace a .css) -->
+    <script src="https://kit.fontawesome.com/25b38f7db0.js" crossorigin="anonymous"></script>
+    <!-- Cargar framework para diseño responsivo -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Cargar hoja de estilos externa, así podemos reutilizarla en otros proyectos similares -->
+    <link rel="stylesheet" href="CSS/estilos_cv.css"> 
+    <!-- Cargar hoja de scripts (JS) externa para comportamiento/acciones de página -->
+    <script src="scripts/comportamiento_cv.js"></script>
+</head>
+
+<!-- Contenido -->
+<body>
+    <header class="w3-container">
+        <nav class="w3-bar w3-teal"> <!-- barra de navegación con enlaces a las distintas secciones (indicadas con "#id_sección)")-->    
+            <a class="w3-bar-item w3-button w3-mobile" href="#info_personal"> Información personal </a> 
+            <a class="w3-bar-item w3-button w3-mobile" href="#perfil_prof"> Perfil profesional </a>
+            <a class="w3-bar-item w3-button w3-mobile" href="#formacion"> Formación académica y profesional </a>
+            <a class="w3-bar-item w3-button w3-mobile" href="#habilidades"> Habilidades </a>
+        </nav>
+    
+        <h1>Amadeo Washington Churrengo</h1>
+        <h2>Desarrollador web <i>full-stack</i> </h2>
+        
+        <img class="w3-round" src="https://randomuser.me/api/portraits/men/72.jpg" alt="Foto de perfil"> 
+        <!--La clase "w3-round" redondea borde de imagen -->
+    </header>
+   
+    <section id="info_personal">
+        
+        <h3>Información personal</h3>
+        </div>
+        <ul class="ul_solotexto">
+            <li> <span class="fa-regular fa-calendar"></span> 33 años</li> <!-- Se incluyen iconos de fuente externa (Font Awesome) usando elemento <span> (tb puede usarse <i>)-->
+            <li> <span class="fa-solid fa-phone"></span> Cel: 1234592132</li>
+            <li> <span class="fa-solid fa-at"></span> <a href="mailto:awachurro@notmail.com">awachurro@notmail.com</a></li> <!-- href="mailto:..." crea enlace interactivo a mail en cuestión-->
+            <li> <span class="fa-brands fa-square-twitter"></span> @awachurro</li>
+        </ul>
+    </section>
+
+    <section id="perfil_prof">
+        <h3>Perfil profesional</h3>
+
+        <p>Desarrollador de software con experiencia en diseño, instalación, pruebas y mantenimiento de sistemas de software. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel arcu eget elit ultrices convallis. Etiam sed mattis erat. Etiam placerat ultricies commodo. Vestibulum sem lacus, interdum eu ante eu, tincidunt malesuada arcu.</p>
+
+    </section>
+
+    <section id="formacion">
+
+        <h3>Formación académica y profesional</h3>
+
+        <h4>Educación formal</h4>
+            <ul>
+                <li>2000-2005: Grado en Ingeniería Informática, Escuela de Ingeniería Informática, Universidad de Lacalle, Monrovia </li>
+                <li>2006-2009: Master en Ingeniería Informática, Escuela de Ingeniería Informática, Universidad de Lacalle, Monrovia</li>
+            </ul>
+        
+        <h4>Experiencia profesional</h4>
+            <ul>
+                <li>2010-2015 Desarrollador de software en Sarasa Inc.</li>
+                <li>2015-actualidad: Lorem ipsum dolor sit amet.</li>
+            </ul>
+    </section>
+
+    <section id="habilidades">
+        <h3>Habilidades</h3>
+        <ul class="ul_solotexto">
+            <li> <span class="fa-brands fa-js"></span> Avanzado</li>
+            <li> <span class="fa-brands fa-java"></span> Avanzado</li>
+            <li> <span class="fa-brands fa-css3"></span> Intermedio</li>
+            <li> <span class="fa-regular fa-comments"></span> Inglés avanzado</li>
+        </ul>
+    </section>
+
+<!-- Pie de página -->
+   <footer class="w3-container">
+   <em style= "background-color: teal ; font-weight: bold" > Aclaración</em>: Los datos consigados en el presente CV son ficticios y sólo a fines didácticos.
+   </footer>
+</body>
+</html>
