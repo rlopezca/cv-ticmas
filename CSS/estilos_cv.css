@@ -1,32 +1,50 @@
 * { /* estilos a aplicar a todos los elementos que así lo permitan */
-    box-sizing: border-box;
+    box-sizing: border-box; /* El tamaño de los elementos incluye el "padding" y "border", útil para evitar superposiciones o salidas de marco */
     background-color: beige;
 }
 
 h1 {
-    font-family: "Anton", sans-serif;
-}
+    font-family: "Anton", sans-serif; /* Fuente cargade de Google Fonts */
+} 
 
 h2 {
-    font-family: "Oswald", sans-serif;
+    font-family: "Oswald", sans-serif; /* Fuente cargade de Google Fonts */
 }
 
-/* evitar que imagen escale más del 100%} */
 img {
-    max-width: 100%;
+    max-width: 100%; /* evitar que imágenes escalen más del 100% y se deformen/pixelen */
+    max-height: 100%;
 }
 
 nav {
-    background-color: teal;
+    background-color: #009688;
+    color: white;
+    margin-bottom: 10px; /* agregamos una separación vertical con resto de página */
 }
 
 footer {
-    background-color: teal; 
-    font-size:  small;
+    background-color: #009688; 
+    font-size:medium;
     color: white;
 }
 
-/* quitar indicador de item de lista no ordenada */
 .ul_solotexto {
-    list-style-type: none;
+    list-style-type: none; /* quitar indicador de item de lista */
 }
+
+/* botón volver a tope superior de página */
+#btn_aInicio {
+    position: fixed;
+    right: 5%; /* Posición dde.margen derecho*/
+    bottom: 5%; /* Ubicar botón cercano al fin de pág. */
+    padding: 8px 12px;
+    cursor:pointer; /* Indicar mediante cursor (al sobrevolar botón) que "cliquear" produce acción*/
+    background-color: lightcoral;
+    border: none;  /*Se puede utilizar atrib. "border" p definir el o los valores de los sgtes. atrib.: "border-width", "border-style", "border-color" en una misma línea.*/
+    border-radius: 3px; /* Redondear el borde */
+}
+
+#btn_aInicio:hover { /* cambia fondo de botón al sobrevolarlo */
+    background-color: grey;
+}
+

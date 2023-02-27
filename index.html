@@ -1,73 +1,94 @@
 <!DOCTYPE html>
 <html lang="es"> <!-- Idioma principal en página -->
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- RWD escalar contenido a la pantalla del dispositivo -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" 
+    content="IE=edge">
+
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0"> <!-- RWD escalar contenido a la pantalla del dispositivo -->
 
     <!-- Metadatos OpenGraph para mejorar visibilidad al compartir en RRSS -->
-    <meta property="og:title" content="W.A. Churrengo - CV" />
-    <meta property="og:description" content="Proyecto de desarrollo web: CV" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://rlopezca.github.io/cv-ticmas/" />
-    <meta property="og:site_name" content="rlopezca GitHub Pages" />
-    <!-- Imágen a mostrar en enlace en RRSS -->
-    <meta property="og:image" content="https://rlopezca.github.io/cv-ticmas/imagenes/curriculum-information-svgrepo-com-512_opt.png" /> 
-    <!-- OpenGraph al parecer aún no soporta imágenes de tipo vector (.svg) -->
-    <meta property="image:type" content="image/png">
+    <meta property="og:locale" 
+    content="es_AR" /> <!-- Especificamos idioma_REGIÓN para OpenGraph -->
+    <meta property="og:title" 
+    content="W.A. Churrengo - CV" />
+    <meta property="og:description" 
+    content="Proyecto de desarrollo web: CV" />
+    <meta property="og:type" 
+    content="website" />
+    <meta property="og:url" 
+    content="https://rlopezca.github.io/cv-ticmas/" />
+    <meta property="og:site_name" 
+    content="rlopezca GitHub Pages" />
+
+    <meta property="og:image" 
+    content="
+    <!-- https://rlopezca.github.io/cv-ticmas/ -->
+    imagenes/curriculum-information-svgrepo-com-512_opt.jpg" /> <!-- Imágen a mostrar en enlace en RRSS -->
+    <meta property="image:type" 
+    content="image/jpg"> <!-- OpenGraph al parecer aún no soporta imágenes de tipo vector (.svg) -->
     <meta property="image:width" 
     content="512" />   <!-- Las dimensiones mín recomendadadas son de 600 x 315 px (a x h), ver https://mysiteauditor.com/blog/how-to-make-facebook-show-the-correct-thumbnail/ -->
     <meta property="image:height" 
     content="512" /> 
-    <meta property="image:alt" content="Ícono de CV" />
+    <meta property="image:alt" 
+    content="Ícono de CV" /> <!-- Mensaje alternativo si no se puede mostrar imagen -->
 
-    <!-- Algunos sitios recomiendan imágenes no mayores a 300x300 px para que se muestren en WhatsApp. NO HE PODIDO HACER QUE FUNCIONE -->
-    <meta property="og:image" content="https://rlopezca.github.io/cv-ticmas/imagenes/curriculum-information-svgrepo-com-256_opt.png" />
-    <meta property="image:type" content="image/png">
+    <meta property="og:image" 
+    content="
+    <!-- https://rlopezca.github.io/cv-ticmas/ -->
+    imagenes/curriculum-information-svgrepo-com-256_opt.jpg" /> <!-- Imagen alternativa de menor resolución. Algunos sitios recomiendan imágenes no mayores a 300x300 px para que se muestren en WhatsApp. NO HE PODIDO HACER QUE FUNCIONE -->
+    <meta property="image:type" 
+    content="image/jpg">
     <meta property="image:width" 
     content="256" /> 
     <meta property="image:height" 
     content="256" /> 
-    <meta property="image:alt" content="Ícono de CV" />
+    <meta property="image:alt" 
+    content="Ícono de CV" />
 
-    <!-- Especificamos idioma_REGIÓN para OpenGraph -->
-    <meta property="og:locale" content="es_AR" />
     
-    <!-- Título de página web -->
-    <title>W.A. Churrengo - CV</title>
+    <title>W.A. Churrengo - CV</title> <!-- Título de página web -->
+
     <!-- Hacer disponibles fuentes externas (Google Fonts) a usar-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300&display=swap" rel="stylesheet">
-    <!-- Más fuentes externas, tipo íconos (FontAwesome), en este caso cargada con un script (tb puede hacerse con enlace a .css) -->
-    <script src="https://kit.fontawesome.com/25b38f7db0.js" crossorigin="anonymous"></script>
-    <!-- Cargar framework para diseño responsivo -->
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <!-- Cargar hoja de estilos externa, así podemos reutilizarla en otros proyectos similares -->
-    <link rel="stylesheet" href="CSS/estilos_cv.css"> 
-    <!-- Cargar hoja de scripts (JS) externa para comportamiento/acciones de página -->
-    <script src="scripts/comportamiento_cv.js"></script>
+
+    <script src="https://kit.fontawesome.com/25b38f7db0.js" crossorigin="anonymous"></script> <!-- Más fuentes externas, tipo íconos (FontAwesome), en este caso cargada con un script (tb puede hacerse con enlace a .css) -->
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- Cargar framework W3.CSS. Facilita diseño responsivo: ahorramos o evitamos uso de "media queries". Sintaxis clases: "w3-clase".-->
+    
+    <link rel="stylesheet" href="CSS/estilos_cv.css"> <!-- Cargar hoja de estilos externa, así podemos reutilizarla en otros proyectos similares -->
+    
+    <script src="scripts/comportamiento_cv.js"></script> <!-- Cargar hoja de scripts (JS) externa para comportamiento/acciones de página -->
 </head>
 
 <!-- Contenido -->
 <body>
+    <a href="#Inicio"> <button  id= "btn_aInicio" title= "Volver a inicio"> <span class= "fa-solid  fa-angles-up" > </span> </button> </a> <!-- Botón p volver a tope de pág. (Inicio) -->
+
     <header class="w3-container">
-        <nav class="w3-bar w3-teal"> <!-- barra de navegación con enlaces a las distintas secciones (indicadas con "#id_sección)")-->    
+        <nav class="w3-bar" id="Inicio"> <!-- barra de navegación con enlaces a las distintas secciones (indicadas con "#id_sección)")-->    
             <a class="w3-bar-item w3-button w3-mobile" href="#info_personal"> Información personal </a> 
             <a class="w3-bar-item w3-button w3-mobile" href="#perfil_prof"> Perfil profesional </a>
-            <a class="w3-bar-item w3-button w3-mobile" href="#formacion"> Formación y eperiencia </a>
+            <a class="w3-bar-item w3-button w3-mobile" href="#formacion"> Formación y experiencia </a>
             <a class="w3-bar-item w3-button w3-mobile" href="#habilidades"> Habilidades </a>
         </nav>
 
         <div class="w3-row">
-          <div class="w3-container w3-twothird">
-            <h1>Amadeo Washington Churrengo</h1>
-            <h2>Desarrollador web <i>full-stack</i> </h2>
-          </div>
-          <div class="w3-third">
-            <img class="w3-round" src="https://randomuser.me/api/portraits/men/72.jpg" alt="Foto de perfil"> <!--La clase "w3-round" redondea borde de imagen -->
-          </div>
+            <div class="w3-card">
+                
+                <div class="w3-container w3-twothird"> <!-- Asignar 2/3 del espacio horiz. al contenido sgte. -->
+                    <h1>Amadeo Washington Churrengo</h1>
+                    <h2>Desarrollador web <i>full-stack</i> </h2>
+                </div>
+
+                <div class="w3-container w3-third"> <!-- Asignar espacio horiz. restante (1/3) al contenido sgte. -->
+                    <img class="w3-round" id="foto_perfil" src="https://randomuser.me/api/portraits/men/72.jpg" alt="Foto de perfil"> <!--La clase "w3-round" redondea borde de imagen -->
+                </div>
         </div>
 
     </header>
@@ -77,10 +98,10 @@
         <h3>Información personal</h3>
         
         <ul class="ul_solotexto">
-            <li> <span class="fa-regular fa-calendar"></span> 33 años</li> <!-- Se incluyen iconos de fuente externa (Font Awesome) usando elemento <span> (tb puede usarse <i>)-->
+            <li> <span class="fa-regular fa-calendar"></span> 33 años</li> <!-- Íconos de fuente externa (Font Awesome) usando elemento <span> (tb puede usarse <i>)-->
             <li> <span class="fa-solid fa-phone"></span> Cel: 1234592132</li>
             <li> <span class="fa-solid fa-at"></span> <a href="mailto:awachurro@notmail.com">awachurro@notmail.com</a></li> <!-- href="mailto:..." crea enlace interactivo a mail en cuestión-->
-            <li> <span class="fa-brands fa-square-twitter"></span> @awachurro</li>
+            <li> <span class="fa-brands fa-twitter"></span> @awachurro</li>
         </ul>
     </section>
 
@@ -119,8 +140,9 @@
     </section>
 
 <!-- Pie de página -->
-   <footer class="w3-container">
-   <em style= "background-color: teal ; font-weight: bold" > Aclaración</em>: Los datos consigados en el presente CV son ficticios y sólo a fines didácticos.
+   <footer>
+   <em style= "background-color: inherit; font-weight: bold"> <!-- valor "inherit" asegura mantener el ya definido (en este caso en CSS externo) para el atributo-->
+    Aclaración</em>: Los datos consigados en el presente CV son ficticios y sólo a fines didácticos.
    </footer>
 </body>
 </html>
