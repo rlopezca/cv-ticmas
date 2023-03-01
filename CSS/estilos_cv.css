@@ -1,6 +1,6 @@
 * { /* estilos a aplicar a todos los elementos que así lo permitan */
     box-sizing: border-box; /* El tamaño de los elementos incluye el "padding" y "border", útil para evitar superposiciones o salidas de marco */
-    background-color: beige;
+    /* background-color: beige; */
 }
 
 h1 {
@@ -28,12 +28,16 @@ footer {
     color: white;
 }
 
-.ul_solotexto {
+.w3-card {
+    background-color: whitesmoke;
+}
+
+.ulSolotexto {
     list-style-type: none; /* quitar indicador de item de lista */
 }
 
 /* botón volver a tope superior de página */
-#btn_aInicio {
+#btnAinicio {
     position: fixed;
     right: 5%; /* Posición dde.margen derecho*/
     bottom: 5%; /* Ubicar botón cercano al fin de pág. */
@@ -44,7 +48,20 @@ footer {
     border-radius: 3px; /* Redondear el borde */
 }
 
-#btn_aInicio:hover { /* cambia fondo de botón al sobrevolarlo */
+#btnAinicio:hover { /* cambia fondo de botón al sobrevolarlo */
     background-color: grey;
 }
 
+#btnPerfil {
+    background-color: lightgrey;
+    max-width: 800px;
+    border-radius: 6px;
+    text-align: center; /* leyenda centrada */
+    cursor: pointer;
+    font-size: 0.75em;
+    margin: 8px 0px;
+}
+
+#fotoPerfil {
+    margin-top: 8px;
+}

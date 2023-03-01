@@ -51,96 +51,123 @@
     <title>W.A. Churrengo - CV</title> <!-- Título de página web -->
 
     <link rel="icon" 
-    type="image/svg+xml" 
-    href="/imagenes/favicon.svg"> <!-- Favicon. Ventaja usar vectores (si el navegador lo soporta): escala automáticamente sin perder nitidez -->
+    type="image/png" 
+    href="imagenes/favicon-32.png"
+    sizes="32x32"> <!-- Favicon, tamaño preferido mayoría de exploradores de escritorio, resto de tamaños ver: https://www.emergeinteractive.com/insights/detail/the-essentials-of-favicons/ . Se incluye "favicon.ico" en directorio raíz de esta pág. como alternativa para retrocompatibilidad.-->
+    <link rel="icon" 
+    type="image/png" 
+    href="imagenes/favicon-128.png"
+    sizes="128x128">
+    <link rel="icon" 
+    type="image/png" 
+    href="imagenes/favicon-180.png"
+    sizes="180x180">
+    <link rel="icon" 
+    type="image/png" 
+    href="imagenes/favicon-192.png"
+    sizes="192x192">
+
+    <!-- <link rel="icon" 
+    type="image/svg+xml"    
+    href="imagenes/favicon.svg"> 
+    Favicon. Ventaja usar vectores (si el navegador lo soporta, no ocurre con varias versiones móviles en 2023): escala automáticamente sin perder nitidez -->
 
     <!-- Hacer disponibles fuentes externas (Google Fonts) a usar-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&familyfamily=Oswald:wght@300&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/25b38f7db0.js" crossorigin="anonymous"></script> <!-- Más fuentes externas, tipo íconos (FontAwesome), en este caso cargada con un script (tb puede hacerse con enlace a .css) -->
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- Cargar framework W3.CSS. Facilita diseño responsivo: ahorramos o evitamos uso de "media queries". Sintaxis clases: "w3-clase".-->
     
     <link rel="stylesheet" href="CSS/estilos_cv.css"> <!-- Cargar hoja de estilos externa, así podemos reutilizarla en otros proyectos similares -->
-    
-    <script src="scripts/comportamiento_cv.js"></script> <!-- Cargar hoja de scripts (JS) externa para comportamiento/acciones de página -->
+       
 </head>
 
 <!-- Contenido -->
 <body>
-    <a href="#Inicio"> <button  id= "btn_aInicio" title= "Volver a inicio"> <span class= "fa-solid  fa-angles-up" > </span> </button> </a> <!-- Botón p volver a tope de pág. (Inicio) -->
+    <a href="#inicio"> <button  id= "btnAinicio" title= "Volver a inicio"> <span class= "fa-solid  fa-angles-up" > </span> </button> </a> <!-- Botón p volver a tope de pág. (Inicio) -->
 
     <header class="w3-container">
-        <nav class="w3-bar" id="Inicio"> <!-- barra de navegación con enlaces a las distintas secciones (indicadas con "#id_sección)")-->    
-            <a class="w3-bar-item w3-button w3-mobile" href="#info_personal"> Información personal </a> 
-            <a class="w3-bar-item w3-button w3-mobile" href="#perfil_prof"> Perfil profesional </a>
+        <nav class="w3-bar" id="inicio"> <!-- barra de navegación con enlaces a las distintas secciones (indicadas con "#idSección)")-->    
+            <a class="w3-bar-item w3-button w3-mobile" href="#infoPersonal"> Información personal </a> 
+            <a class="w3-bar-item w3-button w3-mobile" href="#perfilProf"> Perfil profesional </a>
             <a class="w3-bar-item w3-button w3-mobile" href="#formacion"> Formación y experiencia </a>
             <a class="w3-bar-item w3-button w3-mobile" href="#habilidades"> Habilidades </a>
         </nav>
 
-        <div class="w3-row">
-            <div class="w3-card">
+        <div class="w3-row-padding"> <!--Contenedor tipo fila (con "padding"; "w3-row" no tiene) necesario para que el diseño sea responsivo-->
+            <div class="w3-card w3-container w3-margin-bottom"> 
+                <!-- w3-margin-bottom genera un espacio debajo de objeto -->
                 
-                <div class="w3-container w3-twothird"> <!-- Asignar 2/3 del espacio horiz. al contenido sgte. -->
+                <div class="w3-twothird"> <!-- Asignar 2/3 del espacio horiz. al contenido sgte. -->
                     <h1>Amadeo Washington Churrengo</h1>
                     <h2>Desarrollador web <i>full-stack</i> </h2>
                 </div>
 
                 <div class="w3-container w3-third"> <!-- Asignar espacio horiz. restante (1/3) al contenido sgte. -->
-                    <img class="w3-round" id="foto_perfil" src="https://randomuser.me/api/portraits/men/72.jpg" alt="Foto de perfil"> <!--La clase "w3-round" redondea borde de imagen -->
+                    <img class="w3-round" id="fotoPerfil" src="https://randomuser.me/api/portraits/men/72.jpg" alt="Foto de perfil"> <!--La clase "w3-round" redondea borde de imagen -->
+                    <br>
+                    <button type="button" id="btnPerfil" title="Mantené presionado">Conocé a mi mascota</button>
                 </div>
-        </div>
-
+            </div> <!--Cierre tarjeta-->
+        </div> <!--Cierre fila-->
     </header>
-   
-    <section id="info_personal" class="w3-container">
-        
-        <h3>Información personal</h3>
-        
-        <ul class="ul_solotexto">
-            <li> <span class="fa-regular fa-calendar"></span> 33 años</li> <!-- Íconos de fuente externa (Font Awesome) usando elemento <span> (tb puede usarse <i>)-->
-            <li> <span class="fa-solid fa-phone"></span> Cel: 1234592132</li>
-            <li> <span class="fa-solid fa-at"></span> <a href="mailto:awachurro@notmail.com">awachurro@notmail.com</a></li> <!-- href="mailto:..." crea enlace interactivo a mail en cuestión-->
-            <li> <span class="fa-brands fa-twitter"></span> @awachurro</li>
-        </ul>
-    </section>
 
-    <section id="perfil_prof">
-        <h3>Perfil profesional</h3>
+    <div class="w3-row-padding">
+        <div class="w3-twothird"> <!-- Columna izq -->
+            
+            <section id="infoPersonal" class=" w3-container w3-card w3-margin-bottom">
+                    <h3>Información personal</h3>
+                    
+                <ul class="ulSolotexto">
+                    <li> <span class="fa-regular fa-calendar"></span> 33 años</li> <!-- Íconos de fuente externa (Font Awesome) usando elemento <span> (tb puede usarse <i>)-->
+                    <li> <span class="fa-solid fa-phone"></span> Cel: 1234592132</li>
+                    <li> <span class="fa-solid fa-at"></span> <a href="mailto:awachurro@notmail.com">awachurro@notmail.com</a> </li> <!-- href="mailto:..." crea enlace interactivo a mail en cuestión-->
+                    <li> <span class="fa-brands fa-twitter"></span> @awachurro </li>
+                </ul>
+            </section>
 
-        <p>Desarrollador de software con experiencia en diseño, instalación, pruebas y mantenimiento de sistemas de software. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel arcu eget elit ultrices convallis. Etiam sed mattis erat. Etiam placerat ultricies commodo. Vestibulum sem lacus, interdum eu ante eu, tincidunt malesuada arcu.</p>
+            <section class=" w3-container w3-card w3-margin-bottom" id="perfilProf">
+                <h3>Perfil profesional</h3>
+                            
+                <p>Desarrollador de software con experiencia en diseño, instalación, pruebas y mantenimiento de sistemas de software. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel arcu eget elit ultrices convallis. Etiam sed mattis erat. Etiam placerat ultricies commodo. Vestibulum sem lacus, interdum eu ante eu, tincidunt malesuada arcu.</p>
+            </section>
+            
+            <section class=" w3-container w3-card w3-margin-bottom" id="formacion">
+                <h3>Formación académica y profesional</h3>
+            
+                <h4>Educación formal</h4>
 
-    </section>
-
-    <section id="formacion">
-
-        <h3>Formación académica y profesional</h3>
-
-        <h4>Educación formal</h4>
-            <ul>
-                <li>2000-2005: Grado en Ingeniería Informática, Escuela de Ingeniería Informática, Universidad de Lacalle, Monrovia </li>
-                <li>2006-2009: Master en Ingeniería Informática, Escuela de Ingeniería Informática, Universidad de Lacalle, Monrovia</li>
-            </ul>
-        
-        <h4>Experiencia profesional</h4>
-            <ul>
-                <li>2010-2015 Desarrollador de software en Sarasa Inc.</li>
-                <li>2015-actualidad: Lorem ipsum dolor sit amet.</li>
-            </ul>
-    </section>
-
-    <section id="habilidades">
-        <h3>Habilidades</h3>
-        <ul class="ul_solotexto w3-ul w3-card">
-            <li> <span class="fa-brands fa-js w3-xlarge"></span> Avanzado</li>
-            <li> <span class="fa-brands fa-java w3-xlarge"></span> Avanzado</li>
-            <li> <span class="fa-brands fa-css3 w3-xlarge"></span> Intermedio</li>
-            <li> <span class="fa-regular fa-comments w3-xlarge"></span> Inglés avanzado</li>
-        </ul>
-    </section>
-
+                <ul>
+                    <li>2000-2005: Grado en Ingeniería Informática, Escuela de Ingeniería Informática, Universidad de Lacalle, Monrovia </li>
+                    <li>2006-2009: Master en Ingeniería Informática, Escuela de Ingeniería Informática, Universidad de Lacalle, Monrovia</li>
+                </ul>
+                    
+                <h4>Experiencia profesional</h4>
+                    <ul>
+                        <li>2010-2015 Desarrollador de software en Sarasa Inc.</li>
+                        <li>2015-actualidad: Lorem ipsum dolor sit amet.</li>
+                    </ul>
+            </section>
+        </div> <!--Cierre columna izq.-->
+            
+        <div class="w3-third"> <!--Columna der.-->
+                
+                <section class="w3-container w3-card w3-margin-bottom" id="habilidades">
+                    <h3>Habilidades</h3>
+                    <ul class="ulSolotexto w3-ul w3-card">
+                        <li> <span class="fa-brands fa-js w3-xlarge"></span> Avanzado</li>
+                        <li> <span class="fa-brands fa-java w3-xlarge"></span> Avanzado</li>
+                        <li> <span class="fa-brands fa-css3 w3-xlarge"></span> Intermedio</li>
+                        <li> <span class="fa-regular fa-comments w3-xlarge"></span> Inglés avanzado</li>
+                    </ul>
+                </section> 
+            </div> <!--Cierre columna der. de 2da tarjeta-->
+        </div> <!--Cierre de 2da tarjeta-->
+    </div>
+    
 <!-- Pie de página -->
    <footer>
    <em style= "background-color: inherit; font-weight: bold"> <!-- valor "inherit" asegura mantener el ya definido (en este caso en CSS externo) para el atributo-->
@@ -148,5 +175,7 @@
     <br> <!-- Salto de línea -->
     <a href="https://www.flaticon.com/free-icons/resume-and-cv" title="resume and cv icons">Favicon de CV creado por feen - Flaticon, con modificaciones</a>
    </footer>
+
+   <script type="text/javascript" src="scripts/comportamiento_cv.js"></script> <!-- Cargar hoja de scripts (JS) externa para comportamiento/acciones de página. ¡¡¡ATENCIÓN!!! es conveniente ubicarlo aquí, al final de cuerpo del documento para evitar que se ejecute antes de que se cargen todos los elementos del HTML -->   
 </body>
 </html>
