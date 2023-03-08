@@ -38,13 +38,13 @@ footer {
 
 /* botón volver a tope superior de página */
 #btnAinicio {
-    position: fixed;
+    position: fixed; /* posición fija dentro de la ventana del navegador*/ 
     right: 5%; /* Posición dde.margen derecho*/
     bottom: 5%; /* Ubicar botón cercano al fin de pág. */
     padding: 8px 12px;
     cursor:pointer; /* Indicar mediante cursor (al sobrevolar botón) que "cliquear" produce acción*/
     background-color: lightcoral;
-    border: none;  /*Se puede utilizar atrib. "border" p definir el o los valores de los sgtes. atrib.: "border-width", "border-style", "border-color" en una misma línea.*/
+    border: none;  /*Se puede utilizar atrib. "border" p definir el/los valores de los sgtes. atrib.: "border-width", "border-style", "border-color" en una misma línea.*/
     border-radius: 3px; /* Redondear el borde */
 }
 
