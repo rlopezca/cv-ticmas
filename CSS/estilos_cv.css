@@ -11,6 +11,10 @@ h2 {
     font-family: "Oswald", sans-serif; /* Fuente cargade de Google Fonts */
 }
 
+h3 {
+    background-color: lightsteelblue;
+}
+
 img {
     max-width: 100%; /* evitar que imágenes escalen más del 100% y se deformen/pixelen */
     max-height: 100%;
@@ -18,7 +22,7 @@ img {
 
 nav {
     background-color: #009688;
-    color: white;
+    color: white; /* color texto*/
     margin-bottom: 10px; /* agregamos una separación vertical con resto de página */
 }
 
@@ -26,10 +30,23 @@ footer {
     background-color: #009688; 
     font-size:medium;
     color: white;
+    padding: 12px; /* relleno para q texto no quede tan pegado al margen */
+    padding-bottom: 16px;
+}
+
+
+li [class^="fa-"] { /* Personalizar color y espaciado de todos los elementos de clases que comiences con "fa-", dentro de un ítem de lista (en este caso los iconos FontAwesome)...*/
+    color: rgb(177, 50, 109);
+    margin-right: 8px;
+    margin-bottom: 12px; 
+}
+
+hr { 
+    border: 1px solid #009688; /* damos estilo a separador horizontal*/
 }
 
 .w3-card {
-    background-color: whitesmoke;
+    background-color: whitesmoke; /* color fondo de tarjetas (clase w3-card)*/
 }
 
 .ulSolotexto {
@@ -48,7 +65,7 @@ footer {
     border-radius: 3px; /* Redondear el borde */
 }
 
-#btnAinicio:hover { /* cambia fondo de botón al sobrevolarlo */
+#btnAinicio:hover { /* pseudoclase que permite alterar el estilo del elemento al sobrevolarlo (en este caso cambia fondo de botón)*/
     background-color: grey;
 }
 
@@ -64,4 +81,8 @@ footer {
 
 #fotoPerfil {
     margin-top: 8px;
+}
+
+#habilidades h3 {
+    text-align: center;
 }
