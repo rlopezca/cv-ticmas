@@ -90,3 +90,17 @@ hr {
 #habilidades h3 {
     text-align: center;
 }
+
+#cajaFotoPerfil button,img {
+    display: block;
+ } /* asegurar que la imagen reserve todo el espacio horizontal de su contenedor (el botón siempre quedará debajo)
+
+
+/* media query para pantallas pequeñas (<= 600px) */
+@media only screen and (max-width: 601px) { 
+    #cajaFotoPerfil button,img{ 
+        margin-left: auto; /* asegurar que foto de perfil y botón debajo queden centrados horizontalmente */
+        margin-right: auto;
+
+    }
+}
