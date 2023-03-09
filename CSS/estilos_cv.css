@@ -1,7 +1,7 @@
 * { /* estilos a aplicar a todos los elementos que así lo permitan */
-    box-sizing: border-box; /* El tamaño de los elementos incluye el "padding" y "border", útil para evitar superposiciones o salidas de marco */
-    /* background-color: beige; */
-}
+    box-sizing: border-box;
+ } /* El tamaño de los elementos incluye el "padding" y "border", útil para evitar superposiciones o salidas de marco */
+    
 
 h1 {
     font-family: "Anton", sans-serif; /* Fuente cargade de Google Fonts */
@@ -50,7 +50,7 @@ hr {
 }
 
 .ulSolotexto {
-    list-style-type: none; /* quitar indicador de item de lista */
+    list-style-type: none; /* quitar indicador de item de lista (para poder reemplazarlos por ej. con íconos)*/
 }
 
 /* botón volver a tope superior de página */
@@ -81,6 +81,10 @@ hr {
 
 #fotoPerfil {
     margin-top: 8px;
+}
+
+#infoPersonal ul {
+    padding-left: 8px;
 }
 
 #habilidades h3 {
